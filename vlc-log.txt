@@ -1,0 +1,13 @@
+﻿-- logger module started --
+core debug: VLC media player - 2.2.1 Terry Pratchett (Weatherwax)
+core debug: Copyright © 1996-2015 the VideoLAN team
+core debug: revision 2.2.1-0-ga425c42
+core debug: configured with ../extras/package/win32/../../../configure  '--enable-update-check' '--enable-lua' '--enable-faad' '--enable-flac' '--enable-theora' '--enable-twolame' '--enable-quicktime' '--enable-avcodec' '--enable-merge-ffmpeg' '--enable-dca' '--enable-mpc' '--enable-libass' '--enable-x264' '--enable-schroedinger' '--enable-realrtsp' '--enable-live555' '--enable-dvdread' '--enable-shout' '--enable-goom' '--enable-caca' '--disable-sdl' '--enable-qt' '--enable-skins2' '--enable-sse' '--enable-mmx' '--enable-libcddb' '--enable-zvbi' '--disable-telx' '--enable-nls' '--host=x86_64-w64-mingw32' 'host_alias=x86_64-w64-mingw32'
+core debug: using interface module "logger"
+﻿-- logger module started --
+core debug: VLC media player - 2.2.1 Terry Pratchett (Weatherwax)
+core debug: Copyright © 1996-2015 the VideoLAN team
+core debug: revision 2.2.1-0-ga425c42
+core debug: configured with ../extras/package/win32/../../../configure  '--enable-update-check' '--enable-lua' '--enable-faad' '--enable-flac' '--enable-theora' '--enable-twolame' '--enable-quicktime' '--enable-avcodec' '--enable-merge-ffmpeg' '--enable-dca' '--enable-mpc' '--enable-libass' '--enable-x264' '--enable-schroedinger' '--enable-realrtsp' '--enable-live555' '--enable-dvdread' '--enable-shout' '--enable-goom' '--enable-caca' '--disable-sdl' '--enable-qt' '--enable-skins2' '--enable-sse' '--enable-mmx' '--enable-libcddb' '--enable-zvbi' '--disable-telx' '--enable-nls' '--host=x86_64-w64-mingw32' 'host_alias=x86_64-w64-mingw32'
+core debug: using interface module "logger"
+﻿-- logger module started --

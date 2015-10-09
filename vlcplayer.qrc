@@ -1,0 +1,12 @@
+<RCC>
+    <qresource>
+        <file>Resources/offrecord.png</file>
+        <file>Resources/pause.png</file>
+        <file>Resources/play.png</file>
+        <file>Resources/playback.png</file>
+        <file>Resources/record.png</file>
+        <file>Resources/stop.png</file>
+        <file>Resources/placeholder.jpg</file>
+       <file>Resources/background.jpg</file>
+    </qresource>
+</RCC>

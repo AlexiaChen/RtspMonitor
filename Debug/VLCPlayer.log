@@ -1,0 +1,27 @@
+﻿生成启动时间为 8/24/2015 11:04:09 AM。
+     1>项目“C:\Users\MathxH\Desktop\VLCPlayer\VLCPlayer.vcxproj”在节点 2 上(Build 个目标)。
+     1>CustomBuild:
+         Moc'ing vlcplayer.h...
+         Uic'ing vlcplayer.ui...
+         Rcc'ing vlcplayer.qrc...
+     1>RCC : warning : No resources in 'C:\Users\MathxH\Desktop\VLCPlayer\vlcplayer.qrc'.
+         
+       ClCompile:
+         D:\MathxH\SoftWare\VS2013\VC\bin\CL.exe /c /I.\GeneratedFiles /I. /ID:\MathxH\3rdPartyLib\Qt5.4\5.4\msvc2013_64\include /I.\GeneratedFiles\Debug /ID:\MathxH\3rdPartyLib\Qt5.4\5.4\msvc2013_64\include\QtCore /ID:\MathxH\3rdPartyLib\Qt5.4\5.4\msvc2013_64\include\QtGui /ID:\MathxH\3rdPartyLib\Qt5.4\5.4\msvc2013_64\include\QtWidgets /Zi /nologo /W1 /WX- /Od /Oy- /D UNICODE /D WIN32 /D WIN64 /D QT_DLL /D QT_CORE_LIB /D QT_GUI_LIB /D QT_WIDGETS_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt GeneratedFiles\Debug\moc_vlcplayer.cpp main.cpp vlcplayer.cpp
+         moc_vlcplayer.cpp
+         main.cpp
+         vlcplayer.cpp
+         正在生成代码...
+         D:\MathxH\SoftWare\VS2013\VC\bin\CL.exe /c /I.\GeneratedFiles /I. /ID:\MathxH\3rdPartyLib\Qt5.4\5.4\msvc2013_64\include /I.\GeneratedFiles\Debug /ID:\MathxH\3rdPartyLib\Qt5.4\5.4\msvc2013_64\include\QtCore /ID:\MathxH\3rdPartyLib\Qt5.4\5.4\msvc2013_64\include\QtGui /ID:\MathxH\3rdPartyLib\Qt5.4\5.4\msvc2013_64\include\QtWidgets /Zi /nologo /W1 /WX- /Od /Oy- /D UNICODE /D WIN32 /D WIN64 /D QT_DLL /D QT_CORE_LIB /D QT_GUI_LIB /D QT_WIDGETS_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt GeneratedFiles\qrc_vlcplayer.cpp
+         qrc_vlcplayer.cpp
+       Link:
+         D:\MathxH\SoftWare\VS2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\MathxH\Desktop\VLCPlayer\Win32\Debug\\VLCPlayer.exe" /NOLOGO /LIBPATH:D:\MathxH\3rdPartyLib\Qt5.4\5.4\msvc2013_64\lib qtmaind.lib Qt5Cored.lib Qt5Guid.lib Qt5Widgetsd.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\MathxH\Desktop\VLCPlayer\Win32\Debug\VLCPlayer.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\MathxH\Desktop\VLCPlayer\Win32\Debug\VLCPlayer.lib" /MACHINE:X86 /SAFESEH Debug\moc_vlcplayer.obj
+         Debug\qrc_vlcplayer.obj
+         Debug\main.obj
+         Debug\vlcplayer.obj
+     1>Qt5Widgetsd.lib(Qt5Widgetsd.dll) : fatal error LNK1112: 模块计算机类型“x64”与目标计算机类型“X86”冲突
+     1>已完成生成项目“C:\Users\MathxH\Desktop\VLCPlayer\VLCPlayer.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:04.58
