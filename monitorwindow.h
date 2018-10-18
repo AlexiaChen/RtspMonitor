@@ -29,6 +29,7 @@ public slots:
 	QFFmpeg* ffmpeg() const;
 	//设置窗口的url路径
 	void setUrl(QString& url);
+    void setRtspUrl(QString& rtsp_url);
 	//设置窗口视频的录制文件的输出路径
 	void setOutPath(QString& path,QString& format);
 	//开始播放

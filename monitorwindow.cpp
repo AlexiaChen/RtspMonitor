@@ -67,6 +67,14 @@ void MonitorWindow::setUrl(QString& url)
 {
 	m_url = url;
 	m_thread->setUrl(m_url);
+    m_thread->set_url_form(SDP);
+}
+
+void MonitorWindow::setRtspUrl(QString& rtsp_url)
+{
+    m_url = rtsp_url;
+    m_thread->setUrl(m_url);
+    m_thread->set_url_form(RTSP);
 }
 
 void MonitorWindow::setOutPath(QString& path, QString& format)

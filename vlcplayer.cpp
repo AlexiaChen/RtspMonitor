@@ -10,25 +10,24 @@
 #include <QSize>
 
 #include "vlcplayer.h"
-#include "rtspdialog.h"
-#include "global.h"
-#include "configuredlg.h"
-#include "monitorwindowmanager.h"
-#include "monitorwindow.h"
+
 
 VLCPlayer::VLCPlayer(QWidget *parent)
-	: QMainWindow(parent), m_row(2), m_column(3)
+    : QMainWindow(parent), m_row(1), m_column(1)
 {
 	
 	ui = new Ui::VLCPlayerClass;
 	m_rtsp = new RtspDialog(this);
+    m_rtsp_url = new add_Rtsp_Url(this);
 	m_configDlg = new ConfigureDlg(this);
 	
 	ui->setupUi(this);
 
 	QMenu *file = menuBar()->addMenu("File");
 	QAction *openUrl = file->addAction("Open SDP File");
-	QAction *exit = file->addAction("Exit");
+    QAction *openRtsp = file->addAction("Open Rtsp Url");
+    QAction *exit = file->addAction("Exit");
+
 
 	QMenu *config = menuBar()->addMenu("Configure");
 	QAction *layout = config->addAction("Row X Column");
@@ -58,9 +57,11 @@ VLCPlayer::VLCPlayer(QWidget *parent)
 
 	connect(exit, SIGNAL(triggered()), this, SLOT(Exit()));
 	connect(openUrl, SIGNAL(triggered()), this, SLOT(OpenURL()));
+    connect(openRtsp, SIGNAL(triggered()), this, SLOT(OpenRTSP()));
 	connect(layout, SIGNAL(triggered()), this, SLOT(showRowColumnDlg()));
 	connect(m_rtsp, SIGNAL(fileComplete(QString&, QString&,QString&)), this,SLOT(recvFile(QString&, QString&,QString&)));
 	connect(m_configDlg, SIGNAL(configComplete(int, int)), this, SLOT(recvConfig(int, int)));
+    connect(m_rtsp_url, SIGNAL(add_a_device(QString&,QString&)),this,SLOT(recvDevice(QString&, QString&)));
 
 }
 
@@ -134,6 +135,10 @@ void VLCPlayer::OpenURL()
 	m_rtsp->show();
 }
 
+void VLCPlayer::OpenRTSP()
+{
+    m_rtsp_url->show();
+}
 
 void VLCPlayer::recvFile(QString& file, QString &path,QString& format)
 {
@@ -144,11 +149,25 @@ void VLCPlayer::recvFile(QString& file, QString &path,QString& format)
 		{
 			ui->play->setIcon(QIcon(":/Resources/pause.png"));
 			player->setUrl(file);
-			player->setOutFile(path);
-			player->startPlaying();
+//			player->setOutFile(path);
+            player->setOutPath(path, format);
+            player->startPlaying();
 		}
 	}
 
+}
+
+void::VLCPlayer::recvDevice(QString& rtsp, QString& deviceName)
+{
+    for(auto& player : m_playerSet)
+    {
+        if(!player->isActive())
+        {
+            ui->play->setIcon(QIcon(":/Resources/pause.png"));
+            player->setRtspUrl(rtsp);
+            player->startPlaying();
+        }
+    }
 }
 
 void VLCPlayer::recvConfig(int row, int column)
