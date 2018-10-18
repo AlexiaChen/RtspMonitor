@@ -238,7 +238,7 @@ void  QFFmpeg::decodeFrame(uint8_t* frameBuffer, int frameLength, long second, l
 		now_time = gmtime(&time);
 
 		strftime(timestamp, 100, "%Y-%m-%d %H:%M:%S", now_time);
-		sprintf_s(millisecond, 50, "  %ld.%d%d%d",microSecond/1000,0,0,0);
+        snprintf(millisecond, 50, "  %ld.%d%d%d",microSecond/1000,0,0,0);
 
 		//发送获取一帧图像信号
 		QImage image((uchar*)dstSlice[0], m_videoWidth, m_videoHeight, QImage::Format_RGB32);

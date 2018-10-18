@@ -26,26 +26,28 @@ RtspDialog::~RtspDialog()
 
 void RtspDialog::OK()
 {
-
-	QRegExp sdpFileExp(QString("[c-zC-Z]:(/\\w+)*([/]|[.][sdp]+)?"), Qt::CaseInsensitive);
-	QRegExp recordDirExp(QString("[c-zC-Z]:(/\\w+)*/"),Qt::CaseInsensitive);
+    //[c-zC-Z]:(/\\w+)*([/]|[.][sdp]+)?"), [c-zC-Z]:(/\\w+)*/
+    QRegExp sdpFileExp(QString("*"), Qt::CaseInsensitive);
+    QRegExp recordDirExp(QString("*"),Qt::CaseInsensitive);
 	
-	if (sdpFileExp.exactMatch(ui->filePath->text()) && recordDirExp.exactMatch(ui->recordPath->text()))
+//	if (sdpFileExp.exactMatch(ui->filePath->text()) && recordDirExp.exactMatch(ui->recordPath->text()))
 	{
-		
-		emit fileComplete(ui->filePath->text(), ui->recordPath->text(),ui->format->currentText());
+        QString text = ui->filePath->text();
+        QString record_text = ui->recordPath->text();
+        QString current_text = ui->format->currentText();
+        emit fileComplete(text, record_text, current_text);
 		this->close();
 		
 	}
-	else
-	{
-		QMessageBox::warning(this, "Invalid Input", "<p>Example:</p>        \
-        <p>SdpFile:</p> \
-		<p><font color=RED>D:/UserName/test.sdp</font></p>  \
-		<p>RecordPath:</p>                              \
-		<p><font color=RED>D:/output/ </font></p>          \
-		");
-	}
+//	else
+//	{
+//		QMessageBox::warning(this, "Invalid Input", "<p>Example:</p>        \
+//        <p>SdpFile:</p> \
+//		<p><font color=RED>D:/UserName/test.sdp</font></p>  \
+//		<p>RecordPath:</p>                              \
+//		<p><font color=RED>D:/output/ </font></p>          \
+//		");
+//	}
 }
 
 void RtspDialog::Cancel()
